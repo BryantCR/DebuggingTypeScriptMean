@@ -101,13 +101,14 @@ var math = (x:number, y:number) => {
 
 // 7. Arrow functions and 'this'
 class Elephant {
-   constructor(public age: number){
-        this.age = age; //here this.age must be = to the "public age" in the constructor
+   constructor(public age: number){}
+   birthday = function(){
+      this.age = age; //here this.age must be = to the "public age" in the constructor
+
    }
-   birthday = ():void => {this.age++} 
 }
 const babar = new Elephant(8);
 setTimeout(babar.birthday, 1000)
 setTimeout(function(){
    console.log(`Babar's age is ${babar.age}.`)
-}, 2000)
+   }, 2000)
