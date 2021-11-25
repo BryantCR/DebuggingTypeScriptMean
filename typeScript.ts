@@ -102,8 +102,8 @@ var math = (x:number, y:number) => {
 // 7. Arrow functions and 'this'
 class Elephant {
    constructor(public age: number){}
-   birthday = function(){
-      this.age = age; //here this.age must be = to the "public age" in the constructor
+   birthday = () =>{// just delete "function" and add an arrow
+      this.age++; //here this.age must be = to the "public age" in the constructor, noup this wasn't the error
 
    }
 }
